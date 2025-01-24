@@ -14,10 +14,38 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Add custom CSS for navbar -->
+        <style>
+            html, body {
+                background-color: black; /* Set the background color of the entire page to black */
+                color: white; /* Set default text color to white for better contrast */
+            }
+
+            /* Custom styles for the navbar */
+            #mainNav {
+                background-color: transparent !important; /* Make the navbar background transparent */
+                transition: background-color 0.3s ease; /* Smooth transition for background color */
+            }
+
+            /* Ensure the navbar brand text (NCOS) stays white */
+            #mainNav .navbar-brand {
+                color: white !important; /* Force the text color to white */
+            }
+
+            /* Ensure the navbar links stay white */
+            #mainNav .nav-link {
+                color: white !important; /* Force the text color to white */
+            }
+
+            /* Add a semi-transparent background when scrolling (optional) */
+            #mainNav.scrolled {
+                background-color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent black */
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">NCOS</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +100,17 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- Add JavaScript for navbar background on scroll (optional) -->
+        <script>
+            // Add a scroll event listener to change the navbar background
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNav');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        </script>
     </body>
-    </html>
-       
+</html>
