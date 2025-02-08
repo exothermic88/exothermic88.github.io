@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Installation/">
+        <link rel="prev" href="../shortcuts/">
       
       
-        <link rel="next" href="../shortcuts/">
+        <link rel="next" href="../ncos-repo/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Updating System - NCOS Wiki</title>
+        <title>System maintenance - NCOS Wiki</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-ncos-repository" class="md-skip">
+        <a href="#system-maintenance-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Updating System
+              System maintenance
             
           </span>
         </div>
@@ -375,6 +375,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortcuts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keyboard Shortcuts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -391,7 +412,7 @@
           
   
   <span class="md-ellipsis">
-    Updating System
+    System maintenance
   </span>
   
 
@@ -402,7 +423,7 @@
         
   
   <span class="md-ellipsis">
-    Updating System
+    System maintenance
   </span>
   
 
@@ -424,18 +445,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
+  <a href="#maintaining-ncos-ensures-a-smooth-and-efficient-system-follow-these-directions-to-keep-your-system-up-to-date-and-running-optimally" class="md-nav__link">
     <span class="md-ellipsis">
-      Steps to Add the NCOS Repository
+      Maintaining NCOS ensures a smooth and efficient system. Follow these Directions to keep your system up to date and running optimally.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-updates" class="md-nav__link">
+  <a href="#keeping-the-system-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Future Updates
+      Keeping the System Updated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-up-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning Up the System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cleaning Up the System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-unused-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Unused Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearing-the-package-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clearing the Package Cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-system-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking System Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-system-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring System Resources
     </span>
   </a>
   
@@ -457,11 +538,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../shortcuts/" class="md-nav__link">
+      <a href="../ncos-repo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Keyboard Shortcuts
+    Installing NCOS packages
   </span>
   
 
@@ -594,18 +675,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
+  <a href="#maintaining-ncos-ensures-a-smooth-and-efficient-system-follow-these-directions-to-keep-your-system-up-to-date-and-running-optimally" class="md-nav__link">
     <span class="md-ellipsis">
-      Steps to Add the NCOS Repository
+      Maintaining NCOS ensures a smooth and efficient system. Follow these Directions to keep your system up to date and running optimally.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-updates" class="md-nav__link">
+  <a href="#keeping-the-system-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Future Updates
+      Keeping the System Updated
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-up-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning Up the System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cleaning Up the System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-unused-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Unused Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearing-the-package-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clearing the Package Cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-system-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking System Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-system-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring System Resources
     </span>
   </a>
   
@@ -626,56 +767,64 @@
                   
 
 
-<h1 id="add-ncos-repository">Add NCOS Repository</h1>
-<p>Follow these steps to add the NCOS repository to your system and access NCOS-specific packages.</p>
-<h2 id="steps-to-add-the-ncos-repository">Steps to Add the NCOS Repository</h2>
-<p>1.<strong>Open pacman.conf file:</strong></p>
-<p>Use the following command to open the <code>pacman.conf</code> file in Sublime Text:</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>subl<span class="w"> </span>/etc/pacman.conf
+<h1 id="system-maintenance-guide"><strong>System Maintenance Guide</strong></h1>
+<h3 id="maintaining-ncos-ensures-a-smooth-and-efficient-system-follow-these-directions-to-keep-your-system-up-to-date-and-running-optimally">Maintaining NCOS ensures a smooth and efficient system. Follow these Directions to keep your system up to date and running optimally.</h3>
+<h2 id="keeping-the-system-updated">Keeping the System Updated</h2>
+<p>To update all packages, run:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu
 </span></code></pre></div>
-2. <strong>Add NCOS repository configuration:</strong></p>
-<p>Append the following text to the end of the file:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[ncos]
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>SigLevel = Optional TrustAll
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Server = https://raw.githubusercontent.com/exothermic88/ncos-repo/main/$arch
+To update AUR packages only, run:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yay<span class="w"> </span>--aur
 </span></code></pre></div>
-3. <strong>Synchronize NCOS repository:</strong></p>
-<p class="annotate">Run the following command to add the NCOS repository to <code>pacman</code> (1):</p>
-<ol>
-<li>
-<div class="admonition info">
-<p class="admonition-title">To learn more about <code>pacman</code> for package maintanance, refer to the <a href="https://wiki.archlinux.org/title/Pacman#">arch wiki</a>.</p>
-</div>
-</li>
-</ol>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syy
-</span></code></pre></div>
-4. <strong>Install NCOS-specific package:</strong></p>
-<p>Use the following command to install a NCOS package:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>ncos-package_name
-</span></code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>sudo pacman -S ncos-hotfix</code></p>
-</div>
-<ol>
-<li><strong>Apply the update:</strong></li>
-</ol>
-<p>Run this command to apply the update:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ncos-package_name
-</span></code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>ncos-hotfix</code></p>
-</div>
+For a full system upgrade including AUR packages :
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yay<span class="w"> </span>
+</span></code></pre></div></p>
 <hr />
-<h2 id="future-updates">Future Updates</h2>
-<p>When future updates are released for ncos packages that you have already installed, they will be automatically downloaded when you update your system packages using <code>sudo pacman -Syu</code>.</p>
-<ul>
-<li>To apply the updates, simply run the following command:</li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ncos-package_name
+<h2 id="cleaning-up-the-system">Cleaning Up the System</h2>
+<h3 id="removing-unused-packages">Removing Unused Packages</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always double check the package list before deleting</p>
+</div>
+<p>To remove orphaned packages:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Rns<span class="w"> </span><span class="k">$(</span>pacman<span class="w"> </span>-Qdtq<span class="k">)</span>
+</span></code></pre></div></p>
+<h3 id="clearing-the-package-cache">Clearing the Package Cache</h3>
+<p>To free up disk space:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sc<span class="w">  </span><span class="c1"># Remove old package versions</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Scc<span class="w"> </span><span class="c1"># Remove all cached packages</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="managing-services">Managing Services</h2>
+<p>Check the status of a service:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>systemctl<span class="w"> </span>status<span class="w"> </span>&lt;service-name&gt;
 </span></code></pre></div>
+Enable a service at startup:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>&lt;service-name&gt;
+</span></code></pre></div>
+Disable a service:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>&lt;service-name&gt;
+</span></code></pre></div>
+Restart a service:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>&lt;service-name&gt;
+</span></code></pre></div></p>
+<hr />
+<h2 id="checking-system-logs">Checking System Logs</h2>
+<p>View logs for troubleshooting:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>journalctl<span class="w"> </span>-xe
+</span></code></pre></div>
+View logs for a specific service:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>&lt;service-name&gt;<span class="w"> </span>--no-pager
+</span></code></pre></div></p>
+<hr />
+<h2 id="monitoring-system-resources">Monitoring System Resources</h2>
+<p>To check system resource usage:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>htop<span class="w"> </span>
+</span></code></pre></div>
+To check disk usage:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>df<span class="w"> </span>-h
+</span></code></pre></div></p>
+<hr />
 
 
 
