@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Pre-Install/">
+        <link rel="prev" href="../update/">
       
       
-        <link rel="next" href="../shortcuts/">
+        <link rel="next" href="../license/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Installation - NCOS Wiki</title>
+        <title>Installing NCOS packages - NCOS Wiki</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ncos-installation-guide" class="md-skip">
+        <a href="#add-ncos-repository" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Installing NCOS packages
             
           </span>
         </div>
@@ -244,8 +244,6 @@
       
   
   
-    
-  
   
   
     
@@ -257,11 +255,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -275,7 +273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Installation Guide
@@ -307,30 +305,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Installation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,80 +317,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#boot-into-the-live-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boot into the Live Environment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#select-region-timezone-and-system-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      Select Region, Timezone, and System Language
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-keyboard-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Keyboard Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partition-the-drive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Partition the Drive
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#begin-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Begin Installation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -429,8 +333,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -440,11 +346,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -458,7 +364,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             User-Guide
@@ -511,10 +417,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ncos-repo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installing NCOS packages
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -523,6 +449,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Add the NCOS Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Updates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -651,54 +615,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#boot-into-the-live-environment" class="md-nav__link">
+  <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Boot into the Live Environment
+      Steps to Add the NCOS Repository
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#select-region-timezone-and-system-language" class="md-nav__link">
+  <a href="#future-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Select Region, Timezone, and System Language
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-keyboard-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Keyboard Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partition-the-drive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Partition the Drive
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#begin-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Begin Installation
+      Future Updates
     </span>
   </a>
   
@@ -719,45 +647,56 @@
                   
 
 
-<h1 id="ncos-installation-guide">NCOS Installation Guide</h1>
-<hr />
-<h2 id="boot-into-the-live-environment">Boot into the Live Environment</h2>
-<ul>
-<li>Insert the NCOS installation media (USB or ISO).</li>
-<li>Boot from the installation media.</li>
-<li>The live environment will load, and the installer will launch automatically.</li>
-</ul>
-<h2 id="select-region-timezone-and-system-language">Select Region, Timezone, and System Language</h2>
-<ul>
-<li>Choose your preferred <strong>region</strong> and <strong>timezone</strong>.</li>
-<li>Select the <strong>system language</strong> for your installation.</li>
-</ul>
-<h2 id="configure-keyboard-layout">Configure Keyboard Layout</h2>
-<ul>
-<li>Pick your <strong>keyboard layout</strong> from the available options.</li>
-<li>Test the layout to ensure it's correct.</li>
-</ul>
-<h2 id="partition-the-drive">Partition the Drive</h2>
-<p>Choose the <strong>target drive</strong> for installation then
-select one of the partitioning methods:</p>
+<h1 id="add-ncos-repository">Add NCOS Repository</h1>
+<p>Follow these steps to add the NCOS repository to your system and access NCOS-specific packages.</p>
+<h2 id="steps-to-add-the-ncos-repository">Steps to Add the NCOS Repository</h2>
+<p>1.<strong>Open pacman.conf file:</strong></p>
+<p>Use the following command to open the <code>pacman.conf</code> file in Sublime Text:</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>subl<span class="w"> </span>/etc/pacman.conf
+</span></code></pre></div>
+2. <strong>Add NCOS repository configuration:</strong></p>
+<p>Append the following text to the end of the file:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[ncos]
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>SigLevel = Optional TrustAll
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Server = https://raw.githubusercontent.com/exothermic88/ncos-repo/main/$arch
+</span></code></pre></div>
+3. <strong>Synchronize NCOS repository:</strong></p>
+<p class="annotate">Run the following command to add the NCOS repository to <code>pacman</code> (1):</p>
 <ol>
-<li><strong>Install alongside existing OS</strong> – Keeps current partitions and installs NCOS alongside.</li>
-<li><strong>Replace a partition</strong> – Overwrites an existing partition with NCOS.</li>
-<li><strong>Erase disk</strong> – Deletes all partitions and installs NCOS on a clean disk.</li>
-<li><strong>Manual partitioning</strong> – Allows advanced users to create custom partitions.</li>
+<li>
+<div class="admonition info">
+<p class="admonition-title">To learn more about <code>pacman</code> for package maintanance, refer to the <a href="https://wiki.archlinux.org/title/Pacman#">arch wiki</a>.</p>
+</div>
+</li>
 </ol>
-<h2 id="create-a-user">Create a User</h2>
-<ul>
-<li>Enter a <strong>username</strong> and <strong>password</strong> for your account.</li>
-<li>Optionally, enable <strong>automatic login</strong> or require a password at startup.</li>
-</ul>
-<h2 id="begin-installation">Begin Installation</h2>
-<ul>
-<li>Review your settings.</li>
-<li>Click <strong>Install</strong> to begin the process.</li>
-<li>Wait for the installation to complete, then reboot into your new NCOS system.</li>
-</ul>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syy
+</span></code></pre></div>
+4. <strong>Install NCOS-specific package:</strong></p>
+<p>Use the following command to install a NCOS package:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>ncos-package_name
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>sudo pacman -S ncos-hotfix</code></p>
+</div>
+<ol>
+<li><strong>Apply the update:</strong></li>
+</ol>
+<p>Run this command to apply the update:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ncos-package_name
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>ncos-hotfix</code></p>
+</div>
 <hr />
+<h2 id="future-updates">Future Updates</h2>
+<p>When future updates are released for ncos packages that you have already installed, they will be automatically downloaded when you update your system packages using <code>sudo pacman -Syu</code>.</p>
+<ul>
+<li>To apply the updates, simply run the following command:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ncos-package_name
+</span></code></pre></div>
 
 
 
