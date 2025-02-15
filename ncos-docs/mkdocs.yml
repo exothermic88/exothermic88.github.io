@@ -1,0 +1,60 @@
+site_name: NCOS Wiki
+
+theme:
+  name: material
+  
+  features:
+    - navigation.sections
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+  
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    
+extra:
+  homepage: https://exothermic88.github.io/site/home/
+nav:
+  - Home: home.md
+  - Installation Guide:
+    - Pre-Install: Pre-Install.md
+    - Installation: Installation.md
+  - User-Guide:
+    - Keyboard Shortcuts: shortcuts.md
+    - System maintenance: update.md
+    - Installing NCOS packages: ncos-repo.md
+    
+    
+  - About:
+    - License: license.md
+    - Release Notes: release-notes.md
+    
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
