@@ -770,25 +770,28 @@
 <h1 id="system-maintenance-guide"><strong>System Maintenance Guide</strong></h1>
 <h3 id="maintaining-ncos-ensures-a-smooth-and-efficient-system-follow-these-directions-to-keep-your-system-up-to-date-and-running-optimally">Maintaining NCOS ensures a smooth and efficient system. Follow these Directions to keep your system up to date and running optimally.</h3>
 <h2 id="keeping-the-system-updated">Keeping the System Updated</h2>
-<p>To update all packages, run:
+<div class="admonition note">
+<p class="admonition-title">Recommended</p>
+<p>To update all packages:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu
 </span></code></pre></div>
-To update AUR packages only, run:
+To update AUR packages only:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yay<span class="w"> </span>--aur
-</span></code></pre></div>
-For a full system upgrade including AUR packages :
+</span></code></pre></div></p>
+</div>
+<p>For a full system upgrade including AUR packages :
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yay<span class="w"> </span>
 </span></code></pre></div></p>
 <hr />
 <h2 id="cleaning-up-the-system">Cleaning Up the System</h2>
 <h3 id="removing-unused-packages">Removing Unused Packages</h3>
+<p>To remove orphaned packages:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Rns<span class="w"> </span><span class="k">$(</span>pacman<span class="w"> </span>-Qdtq<span class="k">)</span>
+</span></code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Always double check the package list before deleting</p>
 </div>
-<p>To remove orphaned packages:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Rns<span class="w"> </span><span class="k">$(</span>pacman<span class="w"> </span>-Qdtq<span class="k">)</span>
-</span></code></pre></div></p>
 <h3 id="clearing-the-package-cache">Clearing the Package Cache</h3>
 <p>To free up disk space:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sc<span class="w">  </span><span class="c1"># Remove old package versions</span>
