@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} — NCOS News`} description={post.data.summary}>
+  <article class="section page">
+    <div class="container narrow">
+      <p class="back mono"><a href="/news/">← all news</a></p>
+      <div class="meta">
+        <span class={`pill pill-${post.data.tag}`}>{post.data.tag}</span>
+        <time class="mono" datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </div>
+      <h1>{post.data.title}</h1>
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-top: calc(var(--nav-height) + 4rem);
+    min-height: 70vh;
+  }
+
+  .narrow {
+    max-width: 720px;
+  }
+
+  .back {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .meta time {
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.35rem;
+    margin: 2rem 0 0.75rem;
+  }
+
+  .prose :global(h3) {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .prose :global(p) {
+    margin-bottom: 1rem;
+    color: #c6c6d4;
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 1rem 1.4rem;
+    color: #c6c6d4;
+  }
+
+  .prose :global(li) {
+    margin-bottom: 0.4rem;
+  }
+
+  .prose :global(code) {
+    background: #0c0c14;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.85em;
+    color: var(--teal);
+  }
+
+  .prose :global(pre) {
+    background: #0c0c14;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  .prose :global(pre code) {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--violet);
+    padding-left: 1rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+</style>

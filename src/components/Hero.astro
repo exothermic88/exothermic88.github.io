@@ -1,0 +1,97 @@
+---
+import TerminalWindow from './TerminalWindow.astro';
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="copy">
+      <p class="kicker mono">// arch-based · cosmic de · rolling release</p>
+      <h1>
+        <span class="gradient-text">NCOS</span> Linux
+      </h1>
+      <p class="tagline">
+        A lightweight Linux distro running <strong>Cosmic DE</strong>, built on
+        <strong>Arch Linux</strong>. Fast, minimal, and ready out of the box.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#download">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 1v8.3L4.9 6.2 3.5 7.6 8 12.1l4.5-4.5-1.4-1.4L8 9.3V1H8ZM2 13h12v2H2v-2Z"></path>
+          </svg>
+          Download NCOS
+        </a>
+        <a class="btn btn-ghost" href="/wiki/home/">Read the Wiki</a>
+      </div>
+    </div>
+    <div class="term reveal">
+      <TerminalWindow />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: calc(var(--nav-height) + 5.5rem) 0 5.5rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(139, 92, 246, 0.25), transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .kicker {
+    color: var(--teal);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 8vw, 4.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 1.15rem;
+    max-width: 480px;
+    margin: 1.2rem 0 2rem;
+  }
+
+  .tagline strong {
+    color: var(--text);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .term {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 880px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .term {
+      justify-content: flex-start;
+    }
+  }
+</style>

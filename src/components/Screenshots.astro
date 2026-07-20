@@ -1,0 +1,155 @@
+---
+// Drop real screenshots into src/assets/screenshots/ (png/jpg/webp/svg) —
+// they are picked up automatically at build time, sorted by filename.
+const shots = Object.entries(
+  import.meta.glob<string>('../assets/screenshots/*.{png,jpg,jpeg,webp,svg}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  })
+)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([path, url]) => ({
+    url,
+    name: path.split('/').pop()!.replace(/\.[^.]+$/, '').replace(/^\d+-/, ''),
+  }));
+---
+
+<section class="section" id="screenshots">
+  <div class="container">
+    <h2 class="section-title reveal">See it in action</h2>
+    <p class="section-sub reveal">Cosmic DE, the NCOS way. Click a shot to enlarge.</p>
+  </div>
+  <div class="strip reveal">
+    {
+      shots.map((s) => (
+        <figure class="shot">
+          <button class="frame" data-full={s.url} data-name={s.name} aria-label={`Enlarge screenshot: ${s.name}`}>
+            <span class="framebar">
+              <span class="dot" />
+              <span class="dot" />
+              <span class="dot" />
+            </span>
+            <img src={s.url} alt={`NCOS screenshot: ${s.name}`} loading="lazy" />
+          </button>
+          <figcaption class="mono">{s.name}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+
+  <dialog id="lightbox">
+    <button id="lightboxClose" class="mono" aria-label="Close">✕ close</button>
+    <img id="lightboxImg" src="" alt="" />
+  </dialog>
+</section>
+
+<style>
+  .strip {
+    display: flex;
+    gap: 1.4rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem max(calc((100vw - 1120px) / 2), 1.25rem) 1.5rem;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .shot {
+    flex: 0 0 min(640px, 82vw);
+    scroll-snap-align: center;
+  }
+
+  .frame {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: zoom-in;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .frame:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 34px rgba(139, 92, 246, 0.18);
+  }
+
+  .framebar {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.55rem 0.8rem;
+    background: #14141f;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2a2a3d;
+  }
+
+  .frame img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  dialog {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-raised);
+    padding: 0.75rem;
+    max-width: min(1100px, 92vw);
+  }
+
+  dialog::backdrop {
+    background: rgba(5, 5, 10, 0.85);
+    backdrop-filter: blur(6px);
+  }
+
+  dialog img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  #lightboxClose {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  #lightboxClose:hover {
+    color: var(--text);
+  }
+</style>
+
+<script>
+  const dialog = document.getElementById('lightbox') as HTMLDialogElement;
+  const img = document.getElementById('lightboxImg') as HTMLImageElement;
+  document.querySelectorAll<HTMLButtonElement>('.frame').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      img.src = btn.dataset.full!;
+      img.alt = `NCOS screenshot: ${btn.dataset.name}`;
+      dialog.showModal();
+    });
+  });
+  document.getElementById('lightboxClose')!.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+</script>

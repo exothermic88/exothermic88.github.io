@@ -1,0 +1,95 @@
+---
+import { GITHUB_URL, NCOS_REPO_URL } from '../lib/release';
+---
+
+<footer>
+  <div class="container inner">
+    <div class="brand">
+      <p class="mono name">NCOS</p>
+      <p class="tag">Cosmic DE on an Arch base.</p>
+    </div>
+    <nav class="cols">
+      <div>
+        <p class="head mono">site</p>
+        <a href="/#download">Download</a>
+        <a href="/news/">News</a>
+        <a href="/wiki/home/">Wiki</a>
+      </div>
+      <div>
+        <p class="head mono">project</p>
+        <a href={GITHUB_URL} target="_blank" rel="noopener">GitHub</a>
+        <a href={NCOS_REPO_URL} target="_blank" rel="noopener">[ncos] pacman repo</a>
+        <a href="/wiki/license/">License</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container baseline mono">
+    <span>© 2026 NCOS</span>
+    <span>Built with Astro · Hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 3.5rem 0 2rem;
+    margin-top: 3rem;
+    background: var(--bg-raised);
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .name {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    font-size: 1.1rem;
+  }
+
+  .tag {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+  }
+
+  .cols {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .cols a {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cols a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .head {
+    color: var(--text);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+
+  .baseline {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-soft);
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+</style>

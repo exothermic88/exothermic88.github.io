@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 — NCOS Linux">
+  <section class="wrap">
+    <div class="container">
+      <div class="term mono">
+        <p><span class="prompt">$</span> cat {'{'}requested-page{'}'}</p>
+        <p class="err">bash: /requested/page: No such file or directory</p>
+        <p><span class="prompt">$</span> cd <a href="/">~</a><span class="cursor">█</span></p>
+      </div>
+      <h1><span class="gradient-text">404</span></h1>
+      <p class="hint">This page doesn't exist. <a href="/">Head back home</a> or check the <a href="/wiki/home/">wiki</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .wrap {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--nav-height);
+  }
+
+  .term {
+    background: #0c0c14;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    max-width: 560px;
+    font-size: 0.9rem;
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .prompt {
+    color: var(--teal);
+  }
+
+  .err {
+    color: #ff5f57;
+  }
+
+  .cursor {
+    color: var(--violet);
+    animation: blink 1.1s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  h1 {
+    font-size: clamp(4rem, 12vw, 7rem);
+  }
+
+  .hint {
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+</style>

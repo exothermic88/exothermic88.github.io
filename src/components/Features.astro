@@ -1,0 +1,84 @@
+---
+const features = [
+  {
+    title: 'Cosmic Desktop',
+    body: "System76's next-gen Rust desktop — tiling, workspaces, and a clean HIG, configured with sensible NCOS defaults.",
+    icon: 'M8 1 2 4.5v7L8 15l6-3.5v-7L8 1Zm0 2.3 4 2.3v4.8l-4 2.3-4-2.3V5.6l4-2.3Z',
+  },
+  {
+    title: 'Arch Under the Hood',
+    body: 'Rolling release, the AUR at your fingertips, and the Arch Wiki behind you. Bleeding edge without the setup marathon.',
+    icon: 'M8 1 1 15h3l4-9 4 9h3L8 1Z',
+  },
+  {
+    title: 'Lightweight by Design',
+    body: 'No bloat, no telemetry, no ten preinstalled browsers. A lean base that boots fast and stays out of your way.',
+    icon: 'M8 2a6 6 0 1 0 6 6h-2a4 4 0 1 1-4-4V2Zm1 1v4h4a5 5 0 0 0-4-4Z',
+  },
+  {
+    title: 'Custom [ncos] Repo',
+    body: 'NCOS ships its own pacman repository with curated packages and hotfixes — updates arrive with a plain pacman -Syu.',
+    icon: 'M2 3h12v3H2V3Zm0 4h12v3H2V7Zm0 4h12v3H2v-3Zm10-7.5h1v2h-1v-2Zm0 4h1v2h-1v-2Zm0 4h1v2h-1v-2Z',
+  },
+  {
+    title: 'Ready Out of the Box',
+    body: 'Codecs, drivers, shortcuts and a tuned Cosmic session are set up on first boot. Install it and start working.',
+    icon: 'M6.5 11.2 3.3 8l-1.1 1.1 4.3 4.3 7.3-7.3-1.1-1.1-6.2 6.2Z',
+  },
+  {
+    title: 'Free & Open Source',
+    body: 'Built in the open on GitHub. Fork it, patch it, break it, fix it — contributions are always welcome.',
+    icon: 'M5 3a2 2 0 1 1-.5 3.9v2.2A2 2 0 1 1 3 9V7A2 2 0 0 1 5 3Zm6 0a2 2 0 0 1 .5 3.9c-.2 1.9-1.7 3-3.5 3.3V8.1c.9-.2 1.4-.7 1.5-1.2A2 2 0 0 1 11 3ZM4 12.5a1 1 0 1 0 0 .1Z',
+  },
+];
+---
+
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="section-title reveal">Why <span class="gradient-text">NCOS</span>?</h2>
+    <p class="section-sub reveal">Everything you like about Arch, minus the weekend you'd spend setting it up.</p>
+    <div class="grid">
+      {
+        features.map((f) => (
+          <article class="card reveal">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d={f.icon} />
+              </svg>
+            </div>
+            <h3>{f.title}</h3>
+            <p>{f.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .icon {
+    display: inline-flex;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--violet);
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+</style>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="monospace">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1420"/>
+      <stop offset="1" stop-color="#0a0a0f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg3)"/>
+  <circle cx="640" cy="900" r="500" fill="#2dd4bf" opacity="0.05"/>
+  <rect x="0" y="0" width="1280" height="34" fill="#0c0c14" opacity="0.9"/>
+  <text x="640" y="22" fill="#e5e5ef" font-size="14" text-anchor="middle">NCOS · launcher</text>
+  <rect x="390" y="240" width="500" height="320" rx="16" fill="#12121a" stroke="#26263a"/>
+  <rect x="414" y="266" width="452" height="44" rx="10" fill="#1c1c2a"/>
+  <text x="432" y="294" fill="#e5e5ef" font-size="18">cosmic-term<tspan fill="#8b5cf6">█</tspan></text>
+  <rect x="414" y="326" width="452" height="40" rx="8" fill="#8b5cf6" opacity="0.25"/>
+  <text x="432" y="352" fill="#e5e5ef" font-size="16">⬛ COSMIC Terminal</text>
+  <text x="432" y="404" fill="#8888a0" font-size="16">⬛ COSMIC Text Editor</text>
+  <text x="432" y="452" fill="#8888a0" font-size="16">⬛ COSMIC Files</text>
+  <text x="432" y="500" fill="#8888a0" font-size="16">⬛ COSMIC Store</text>
+  <text x="640" y="760" fill="#44445c" font-size="16" text-anchor="middle">placeholder — replace with a real NCOS screenshot</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "ncos-site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "wiki:build": "cd ncos-docs && ../.venv/bin/mkdocs build"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "astro": "^5.12.0"
+  }
+}

@@ -1,0 +1,115 @@
+---
+import { FALLBACK_VERSION } from '../lib/release';
+---
+
+<div class="terminal mono" aria-hidden="true">
+  <div class="bar">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="title">nic@ncos: ~</span>
+  </div>
+  <div class="screen">
+    <p class="line l1"><span class="prompt">$</span> <span class="type t1">neofetch --version-only</span></p>
+    <p class="line l2"><span class="out">NCOS <span data-terminal-version>{FALLBACK_VERSION}</span> — Cosmic DE on an Arch base</span></p>
+    <p class="line l3"><span class="prompt">$</span> <span class="type t2">sudo pacman -Syu ncos-hotfix</span></p>
+    <p class="line l4"><span class="out">:: Synchronizing package databases... <span class="ok">done</span></span></p>
+    <p class="line l5"><span class="prompt">$</span> <span class="cursor">█</span></p>
+  </div>
+</div>
+
+<style>
+  .terminal {
+    background: #0c0c14;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow:
+      0 0 0 1px rgba(139, 92, 246, 0.08),
+      0 24px 60px rgba(0, 0, 0, 0.6),
+      0 0 60px rgba(139, 92, 246, 0.12);
+    overflow: hidden;
+    width: 100%;
+    max-width: 520px;
+    font-size: 0.85rem;
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 0.9rem;
+    background: #14141f;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+
+  .red { background: #ff5f57; }
+  .yellow { background: #febc2e; }
+  .green { background: #28c840; }
+
+  .title {
+    margin-left: 0.6rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+
+  .screen {
+    padding: 1.1rem 1.2rem 1.3rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .line {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .prompt { color: var(--teal); }
+  .out { color: var(--muted); }
+  .ok { color: var(--teal); }
+
+  /* typing effect: reveal each line on a schedule */
+  .type {
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+  }
+
+  .t1 { animation: typing 1.2s steps(24) 0.5s forwards; }
+  .t2 { animation: typing 1.4s steps(28) 3.4s forwards; }
+
+  .l2 { opacity: 0; animation: appear 0.1s 2.4s forwards; }
+  .l4 { opacity: 0; animation: appear 0.1s 5.4s forwards; }
+  .l5 { opacity: 0; animation: appear 0.1s 6s forwards; }
+
+  .cursor {
+    color: var(--violet);
+    animation: blink 1.1s steps(1) infinite;
+  }
+
+  @keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 100%; }
+  }
+
+  @keyframes appear {
+    to { opacity: 1; }
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .type { max-width: 100%; animation: none; }
+    .l2, .l4, .l5 { opacity: 1; animation: none; }
+    .cursor { animation: none; }
+  }
+</style>

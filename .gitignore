@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.astro/
+.venv/
+ncos-docs/site/
+npm-debug.log*

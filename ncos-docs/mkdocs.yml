@@ -1,4 +1,6 @@
 site_name: NCOS Wiki
+site_url: https://exothermic88.github.io/wiki/
+site_dir: ../public/wiki
 
 theme:
   name: material
@@ -24,7 +26,7 @@ theme:
 
     
 extra:
-  homepage: https://exothermic88.github.io/site/home/
+  homepage: https://exothermic88.github.io/
 nav:
   - Home: home.md
   - Installation Guide:

@@ -1,0 +1,140 @@
+---
+import { FALLBACK_VERSION, GITHUB_RELEASES_URL } from '../lib/release';
+---
+
+<div class="release mono">
+  <div class="row">
+    <span class="k">version</span>
+    <span class="v" data-release-version>{FALLBACK_VERSION}</span>
+  </div>
+  <div class="row">
+    <span class="k">released</span>
+    <span class="v" data-release-date>—</span>
+  </div>
+  <div class="row">
+    <span class="k">arch</span>
+    <span class="v">x86_64</span>
+  </div>
+  <div class="changelog" data-release-changelog hidden>
+    <p class="k">latest changes</p>
+    <pre data-release-body></pre>
+    <a data-release-link href={GITHUB_RELEASES_URL} target="_blank" rel="noopener">Full changelog →</a>
+  </div>
+</div>
+
+<style>
+  .release {
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+  }
+
+  .row {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .k {
+    color: var(--muted);
+    min-width: 90px;
+  }
+
+  .k::after {
+    content: ':';
+  }
+
+  .v {
+    color: var(--teal);
+  }
+
+  .changelog {
+    margin-top: 1rem;
+    border-top: 1px dashed var(--border);
+    padding-top: 1rem;
+  }
+
+  .changelog pre {
+    color: var(--text);
+    white-space: pre-wrap;
+    font-size: 0.82rem;
+    max-height: 180px;
+    overflow-y: auto;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .changelog a {
+    font-size: 0.82rem;
+  }
+</style>
+
+<script>
+  import { GITHUB_API_LATEST } from '../lib/release';
+
+  const CACHE_KEY = 'ncos-release-cache';
+  const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
+  interface ReleaseData {
+    tag_name: string;
+    published_at: string;
+    body: string;
+    html_url: string;
+  }
+
+  function readCache(): { at: number; data: ReleaseData } | null {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  async function getRelease(): Promise<ReleaseData | null> {
+    const cached = readCache();
+    if (cached && Date.now() - cached.at < CACHE_TTL) return cached.data;
+    try {
+      const res = await fetch(GITHUB_API_LATEST);
+      if (!res.ok) throw new Error(String(res.status));
+      const json = await res.json();
+      const data: ReleaseData = {
+        tag_name: json.tag_name,
+        published_at: json.published_at,
+        body: json.body ?? '',
+        html_url: json.html_url,
+      };
+      try {
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data }));
+      } catch {}
+      return data;
+    } catch {
+      // network error or rate limit: fall back to stale cache, then to baked-in HTML
+      return cached?.data ?? null;
+    }
+  }
+
+  const release = await getRelease();
+  if (release) {
+    document.querySelectorAll('[data-release-version], [data-terminal-version]').forEach((el) => {
+      el.textContent = release.tag_name;
+    });
+    const dateEl = document.querySelector('[data-release-date]');
+    if (dateEl && release.published_at) {
+      dateEl.textContent = new Date(release.published_at).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+    if (release.body) {
+      const box = document.querySelector<HTMLElement>('[data-release-changelog]');
+      const pre = document.querySelector('[data-release-body]');
+      const link = document.querySelector<HTMLAnchorElement>('[data-release-link]');
+      // plain text on purpose: no markdown rendering, no HTML injection surface
+      if (box && pre) {
+        pre.textContent = release.body.split('\n').slice(0, 14).join('\n').trim();
+        box.hidden = false;
+      }
+      if (link) link.href = release.html_url;
+    }
+  }
+</script>
