@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "wiki:build": "cd ncos-docs && ../.venv/bin/zensical build && rm -rf ../public/wiki && cp -r site ../public/wiki"
+    "wiki:build": "cd ncos-docs && ../.venv/bin/zensical build && rm -rf ../public/wiki && cp -r site ../public/wiki",
+    "wiki:dev": "cd ncos-docs && ../.venv/bin/zensical serve"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.5",
