@@ -11,16 +11,19 @@ npm run build      # production build into dist/
 npm run preview    # serve dist/ locally
 ```
 
-## Wiki (MkDocs)
+## Wiki (Zensical)
 
-The wiki lives in `ncos-docs/` (MkDocs Material) and is built into `public/wiki/`,
+The wiki lives in `ncos-docs/` ([Zensical](https://zensical.org), the successor to
+MkDocs Material — config in `ncos-docs/zensical.toml`) and is built into `public/wiki/`,
 which is **committed** so CI doesn't need Python. After editing any `ncos-docs/docs/*.md`:
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install mkdocs-material   # first time only
+python3 -m venv .venv && .venv/bin/pip install -r ncos-docs/requirements.txt   # first time only
 npm run wiki:build
 git add public/wiki
 ```
+
+To preview the wiki alone while writing: `cd ncos-docs && ../.venv/bin/zensical serve`.
 
 ## Releases
 

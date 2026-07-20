@@ -1,0 +1,64 @@
+[project]
+site_name = "NCOS Wiki"
+site_url = "https://exothermic88.github.io/wiki/"
+# Zensical requires site_dir inside the project root; the wiki:build npm
+# script copies this into ../public/wiki for the Astro site to serve.
+site_dir = "site"
+
+nav = [
+  { "Home" = "home.md" },
+  { "Installation Guide" = [
+    { "Pre-Install" = "Pre-Install.md" },
+    { "Installation" = "Installation.md" },
+  ] },
+  { "User-Guide" = [
+    { "Keyboard Shortcuts" = "shortcuts.md" },
+    { "System maintenance" = "update.md" },
+    { "Installing NCOS packages" = "ncos-repo.md" },
+  ] },
+  { "About" = [
+    { "License" = "license.md" },
+    { "Release Notes" = "release-notes.md" },
+  ] },
+]
+
+[project.extra]
+homepage = "https://exothermic88.github.io/"
+
+[project.theme]
+features = [
+  "navigation.sections",
+  "content.code.copy",
+  "content.code.select",
+  "content.code.annotate",
+  "content.tabs.link",
+]
+
+# Dark mode is listed first so it is the default, matching the old wiki
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
