@@ -19,15 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # The repo was originally on legacy branch-based Pages; make sure the
-      # source is switched to GitHub Actions so deploy-pages below is served.
-      - name: Ensure Pages deploys from Actions
-        run: |
-          curl -sf -X PUT \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            "${{ github.api_url }}/repos/${{ github.repository }}/pages" \
-            -d '{"build_type":"workflow"}'
       - uses: withastro/action@v3
 
   deploy:
