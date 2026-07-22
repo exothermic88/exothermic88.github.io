@@ -13,7 +13,7 @@ nav = [
   ] },
   { "User-Guide" = [
     { "Keyboard Shortcuts" = "shortcuts.md" },
-    { "How-To" = "how-to.md" },
+    { "NCOS Playbook" = "ncos-playbook.md" },
     { "System maintenance" = "update.md" },
     { "Installing NCOS packages" = "ncos-repo.md" },
   ] },
