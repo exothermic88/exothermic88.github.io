@@ -102,15 +102,36 @@ NCOS provides a variety of keyboard shortcuts to enhance your productivity. Here
 | **Open a Terminal**      | `Super+T`                        |
 | **Open Home Folder**     | `Super+F`                        |
 | **Open a Web Browser**   | `Super+B`                        |
-| **Cycle Theme Previous** | `Super+Shift+[`        |
-| **Cycle Theme Next**     | `Super+Shift+]`       |
 | **Suspend**              | `Super+Ctrl+Alt+S`               |
-| **Spotify**              | `Super+Shift+S`                  |
+
+---
+
+## Apps
+
+| Action                   | Shortcut                          |
+|--------------------------|-----------------------------------|
 | **Text Editor**          | `Super+E`                        |
-| **Settings**             | `Super+;`                	      |	
+| **Settings**             | `Super+;`                        |
 | **VSCode**               | `Super+C`                        |
 | **Discord**              | `Super+D`                        |
-| **PhoneSMS**             | `Super+\`                        |
+| **Neovim**               | `Super+N`                        |
+| **Spotify**              | `Super+Shift+S`                  |
+| **Steam**                | `Super+Ctrl+G`                   |
+| **Steam Gamepad UI**     | `Super+Shift+G`                  |
+| **PhoneSMS** (requires `kdeconnect`) | `Super+\`           |
+
+---
+
+## Themes & Wallpapers
+
+See [Themes & Wallpapers](theming.md) for details.
+
+| Action                   | Shortcut                          |
+|--------------------------|-----------------------------------|
+| **Cycle Theme Previous** | `Super+Shift+[`                  |
+| **Cycle Theme Next**     | `Super+Shift+]`                  |
+| **Toggle Light/Dark**    | `Super+Ctrl+]`                   |
+| **Wallpaper Select**     | `Super+Shift+W`                  |
 
 ---
 

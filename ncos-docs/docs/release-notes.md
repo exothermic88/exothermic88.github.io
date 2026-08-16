@@ -1,10 +1,55 @@
 # Release Notes 
 
+## NCOS 2.0
 
+The biggest NCOS release yet — a built-in local AI assistant, btrfs installs with
+bootable snapshots, a full theme system, and a slimmer, faster ISO.
 
+### New Features
+
+- **NCOS Assistant** — a first-party COSMIC applet that puts a local AI assistant in
+  your panel and dock. Runs fully offline via Ollama and can answer questions about
+  NCOS using the built-in documentation. See the [Assistant guide](assistant.md).
+- **First-party applets** — new `ncos-package-update-applet` and `ncos-weather-applet`
+  ship preconfigured in the panel.
+- **Theme system** — three complete themes (Nord, Red, Purple) restyle COSMIC, kitty,
+  and VS Code together. Cycle with `Super+Shift+]` / `Super+Shift+[`. See
+  [Themes & Wallpapers](theming.md).
+- **Wallpaper picker** — `Super+Shift+W` opens a visual wallpaper grid, backed by the
+  new `awww` wallpaper daemon with automatic panorama splitting for dual-monitor
+  wallpapers.
+- **btrfs by default** — the installer now creates a btrfs filesystem with a full
+  subvolume layout (`@`, `@home`, `@root`, `@srv`, `@cache`, `@log`, `@tmp`) and
+  zstd compression.
+- **Bootable snapshots** — the new `auto-snapshot` command wires Timeshift snapshots
+  into the GRUB menu via grub-btrfs. See [Backups & Snapshots](backups.md).
+- **Dual-boot toggle** — `multiboot-toggle enable|disable` switches GRUB between a
+  hidden instant boot and a multiboot menu that detects other operating systems. See
+  [Dual Boot](dual-boot.md).
+- **Redesigned installer** — Calamares 2.0 branding with a new sidebar, navigation,
+  and an all-new slideshow.
+
+### New Default Apps
+
+- **COSMIC Store** — graphical app installation.
+- **COSMIC Monitor** — system monitoring.
+- **LocalSend** — share files with nearby devices.
+- **Popsicle** — flash USB drives.
+- **Android Messages** — text from your desktop.
+- **rofi** — powers the new wallpaper picker.
+
+### Changes & Removals
+
+- **Pamac removed** — use `pacman`, `yay`, or COSMIC Store instead.
+- **KDE Connect no longer preinstalled** — install `kdeconnect` manually if you use it.
+- **Legacy `xf86-video` drivers dropped** — the modern modesetting driver is used.
+- **Slimmer system** — the full Qt6 group was trimmed to just what's needed, saving
+  over a gigabyte of installed size.
+- **Faster ISO** — squashfs compression switched from xz to zstd for quicker boot
+  and install.
 
 ---
-##Hotfix 0.5.1
+## Hotfix 0.5.1
 
 ## Features
 

@@ -10,6 +10,6 @@ export const GITHUB_RELEASES_URL = `${GITHUB_URL}/releases`;
 export const GITHUB_API_LATEST = `https://api.github.com/repos/${GITHUB_REPO}/releases/latest`;
 
 // Shown until the GitHub API answers (or when it is rate-limited / offline).
-export const FALLBACK_VERSION = 'v1.0';
+export const FALLBACK_VERSION = 'v2.0';
 
 export const NCOS_REPO_URL = 'https://github.com/exothermic88/ncos-repo';

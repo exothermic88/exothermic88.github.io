@@ -23,6 +23,15 @@ select one of the partitioning methods:
 3. **Erase disk** – Deletes all partitions and installs NCOS on a clean disk.
 4. **Manual partitioning** – Allows advanced users to create custom partitions.
 
+!!!info "btrfs by default"
+    NCOS 2.0 installs use the **btrfs** filesystem with zstd compression and a full
+    subvolume layout. This enables instant system snapshots you can boot into from
+    the GRUB menu — see [Backups & Snapshots](backups.md) after installing.
+
+!!!tip "Dual-booting?"
+    If you install NCOS alongside another OS, enable the multiboot GRUB menu after
+    your first boot so you can pick between systems — see [Dual Boot](dual-boot.md).
+
 ## Create a User
 - Enter a **username** and **password** for your account.
 - Optionally, enable **automatic login** or require a password at startup.

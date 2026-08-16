@@ -4,7 +4,7 @@ Before installing NCOS, follow these steps to prepare your system:
 
 ## Download the NCOS ISO
 - Visit the [NCOS official website](https://exothermic88.github.io) for the download link.  
-- Download the latest NCOS ISO file.  
+- Download the latest NCOS ISO file (currently **NCOS 2.0**).  
 
 
 

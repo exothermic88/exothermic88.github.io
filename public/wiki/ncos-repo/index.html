@@ -430,6 +430,141 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How-To
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  NCOS Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Themes & Wallpapers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backups & Snapshots
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dual-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dual Boot
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../update/" class="md-nav__link">
         
   
@@ -514,6 +649,17 @@
       On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-party-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        First-Party Packages
+      </span>
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
@@ -705,6 +851,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#first-party-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        First-Party Packages
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps-to-add-the-ncos-repository" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -743,6 +900,43 @@
 
 <h1 id="add-ncos-repository">Add NCOS Repository</h1>
 <p>Follow these steps to add the NCOS repository to your system and access NCOS-specific packages.</p>
+<div class="admonition info">
+<p class="admonition-title">Preconfigured on NCOS 2.0</p>
+<p>Systems installed from the NCOS 2.0 ISO already have the <code>[ncos]</code> repository
+enabled — you can install any package below directly with <code>sudo pacman -S</code>.
+The setup steps further down are for older installs or other Arch-based systems.</p>
+</div>
+<h2 id="first-party-packages">First-Party Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ncos-assistant</code></td>
+<td>The <a href="../assistant/">NCOS Assistant</a> — offline local-AI panel applet</td>
+</tr>
+<tr>
+<td><code>ncos-package-update-applet</code></td>
+<td>Panel applet showing pending package updates</td>
+</tr>
+<tr>
+<td><code>ncos-weather-applet</code></td>
+<td>Panel weather applet</td>
+</tr>
+<tr>
+<td><code>ncos-calamares</code></td>
+<td>The NCOS system installer (used by the live ISO)</td>
+</tr>
+<tr>
+<td><code>ncos-hotfix</code></td>
+<td>Legacy 1.x hotfix package</td>
+</tr>
+</tbody>
+</table>
 <h2 id="steps-to-add-the-ncos-repository">Steps to Add the NCOS Repository</h2>
 <p>1.<strong>Open pacman.conf file:</strong></p>
 <p>Use the following command to open the <code>pacman.conf</code> file in any text editor:</p>
