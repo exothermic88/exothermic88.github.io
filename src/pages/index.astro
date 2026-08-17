@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
-import Screenshots from '../components/Screenshots.astro';
 import DownloadSection from '../components/DownloadSection.astro';
 import { getCollection } from 'astro:content';
 
@@ -14,7 +13,6 @@ const posts = (await getCollection('news'))
 <BaseLayout title="NCOS Linux — Cosmic DE on an Arch base">
   <Hero />
   <Features />
-  <Screenshots />
   <DownloadSection />
 
   <section class="section" id="news">

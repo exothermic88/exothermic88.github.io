@@ -14,17 +14,15 @@ Follow these steps to add the NCOS repository to your system and access NCOS-spe
 | `ncos-assistant` | The [NCOS Assistant](assistant.md) — offline local-AI panel applet |
 | `ncos-package-update-applet` | Panel applet showing pending package updates |
 | `ncos-weather-applet` | Panel weather applet |
-| `ncos-calamares` | The NCOS system installer (used by the live ISO) |
-| `ncos-hotfix` | Legacy 1.x hotfix package |
 
 ## Steps to Add the NCOS Repository
 
-1.**Open pacman.conf file:**
+1. **Open pacman.conf file:**
 
    Use the following command to open the `pacman.conf` file in any text editor:
 
    ```bash
-   sudo nano /etc/pacman.conf
+   txt /etc/pacman.conf
    ```
 2. **Add NCOS repository configuration:**
 
@@ -53,25 +51,15 @@ Follow these steps to add the NCOS repository to your system and access NCOS-spe
    sudo pacman -S ncos-package_name
    ```
 !!!example
-	```sudo pacman -S ncos-hotfix```
-5. **Apply the update:**
+	```sudo pacman -S ncos-assistant```
 
-   Run this command to apply the update:
-
-   ```bash
-   ncos-package_name
-   ```
-!!!example 
-	`ncos-hotfix`
-	
 ---
 ## Future Updates
 
-When future updates are released for ncos packages that you have already installed, they will be automatically downloaded when you update your system packages using `sudo pacman -Syu`.
+When future updates are released for ncos packages that you have already installed, they are installed along with your regular system update — just run:
 
-- To apply the updates, simply run the following command:
+```bash
+sudo pacman -Syu
+```
 
-  ```bash
-  ncos-package_name
-  ```
-  
+No other command is needed.

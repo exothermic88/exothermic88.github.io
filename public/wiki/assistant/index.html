@@ -516,6 +516,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#where-to-find-it" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -531,6 +542,28 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         What It Can Do
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feeding-it-your-wiki" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Feeding It Your Wiki
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuration
       </span>
     </span>
   </a>
@@ -851,6 +884,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#where-to-find-it" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -866,6 +910,28 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         What It Can Do
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feeding-it-your-wiki" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Feeding It Your Wiki
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuration
       </span>
     </span>
   </a>
@@ -909,12 +975,17 @@ with a compact local chat model and an embedding model for searching the NCOS do
 Nothing you type is sent to the cloud.</p>
 </div>
 <hr />
+<h2 id="setup">Setup</h2>
+<p>Before first use, enable Ollama and pull the models the Assistant relies on:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>ollama
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ollama<span class="w"> </span>pull<span class="w"> </span>embeddinggemma:300m
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ollama<span class="w"> </span>pull<span class="w"> </span>llama3.2:1b
+</span></code></pre></div>
+<hr />
 <h2 id="where-to-find-it">Where to Find It</h2>
-<ul>
-<li><strong>Panel / Dock:</strong> click the NCOS Assistant icon — it's pinned to both the top panel
-  and the dock by default.</li>
-<li><strong>App Library:</strong> press <code>Super+A</code> and search for <strong>NCOS Assistant</strong>.</li>
-</ul>
+<p>Add the applet to your panel:</p>
+<p><strong>COSMIC Settings → Desktop → Panel → Configure panel applets → Add "NCOS Assistant"</strong>
+— the chat-bubble icon appears in the panel.</p>
 <hr />
 <h2 id="what-it-can-do">What It Can Do</h2>
 <ul>
@@ -929,6 +1000,28 @@ Nothing you type is sent to the cloud.</p>
 <p>Ask: <em>"How do I switch to the red theme?"</em> — the Assistant will point you to the
 theme cycle shortcut (<code>Super+Shift+]</code>) described in <a href="../theming/">Themes &amp; Wallpapers</a>.</p>
 </div>
+<hr />
+<h2 id="feeding-it-your-wiki">Feeding It Your Wiki</h2>
+<p>Drop <code>.md</code> (or <code>.txt</code>) files into <code>docs/</code> — that folder is indexed by default. Add
+more folders in the applet's settings (gear icon). The index rebuilds automatically
+when files change (checked when the popup opens), or manually via <strong>Settings →
+Rebuild</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The index is stored at <code>~/.local/share/ncos-assistant/index.json</code>.</p>
+</div>
+<hr />
+<h2 id="configuration">Configuration</h2>
+<p>Settings live in the popup (gear icon) and persist via cosmic-config under
+<code>~/.config/cosmic/io.github.exothermic88.ncos-assistant/v1/</code>:</p>
+<ul>
+<li><strong>Ollama server</strong> — local by default (<code>localhost:11434</code>); toggle <strong>"Use remote
+  server"</strong> to point at another machine on your network.</li>
+<li><strong>Models</strong> — chat model (default <code>llama3.2:1b</code>) and embedding model (default
+  <code>embeddinggemma:300m</code>). Changing the embedding model invalidates the index and
+  triggers a rebuild.</li>
+<li><strong>Context chunks</strong> — how many document chunks are retrieved per question.</li>
+</ul>
 <hr />
 <h2 id="tips">Tips</h2>
 <ul>

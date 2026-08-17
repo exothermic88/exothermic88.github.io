@@ -8,13 +8,18 @@ single keystroke.
 
 ## Switching Themes
 
-Three complete themes are included: **Nord** (default), **Red**, and **Purple**.
+Four complete themes are included: **Nord** (default), **Red**, **Purple**, and **Green**.
 
 | Action | Shortcut | Command |
 |--------|----------|---------|
 | **Next theme** | `Super+Shift+]` | `theme-select.sh` |
 | **Previous theme** | `Super+Shift+[` | `theme-select-previous.sh` |
 | **Toggle light/dark** | `Super+Ctrl+]` | `toggle_light_dark` |
+| **Pick a wallpaper** | `Super+Shift+W` | wallpaper picker |
+
+**Picking a wallpaper also switches themes**: each wallpaper belongs to a theme, and
+selecting one from the picker switches your system to that wallpaper's theme — choose
+a wallpaper from the green folder and the Green theme is applied along with it.
 
 When you cycle themes, your current COSMIC, kitty, and VS Code settings are saved back
 into the active theme before the next one is applied — so any tweaks you make to a
@@ -30,8 +35,10 @@ theme stick with it.
 Press `Super+Shift+W` to open the **wallpaper picker** — a visual grid of all your
 wallpapers with thumbnails. Select one and it's applied instantly.
 
-Wallpapers are organized per theme under `~/.config/wallpapers/` — drop your own
-images into those folders and they'll show up in the picker.
+Wallpapers are organized per theme under `~/.config/wallpapers/`, with one folder per
+theme: `nord`, `red`, `purple`, and `green`. Put your own images into the folder of
+the theme they belong to and they'll show up in the picker — the folder determines
+which theme a wallpaper is tied to, and picking it switches the system to that theme.
 
 ---
 

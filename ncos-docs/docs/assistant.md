@@ -11,11 +11,24 @@ the built-in NCOS documentation, and it works as a general chat assistant too.
 
 ---
 
+## Setup
+
+Before first use, enable Ollama and pull the models the Assistant relies on:
+
+```bash
+sudo systemctl enable --now ollama
+ollama pull embeddinggemma:300m
+ollama pull llama3.2:1b
+```
+
+---
+
 ## Where to Find It
 
-- **Panel / Dock:** click the NCOS Assistant icon — it's pinned to both the top panel
-  and the dock by default.
-- **App Library:** press `Super+A` and search for **NCOS Assistant**.
+Add the applet to your panel:
+
+**COSMIC Settings → Desktop → Panel → Configure panel applets → Add "NCOS Assistant"**
+— the chat-bubble icon appears in the panel.
 
 ---
 
@@ -30,6 +43,32 @@ the built-in NCOS documentation, and it works as a general chat assistant too.
 !!!example
     Ask: *"How do I switch to the red theme?"* — the Assistant will point you to the
     theme cycle shortcut (`Super+Shift+]`) described in [Themes & Wallpapers](theming.md).
+
+---
+
+## Feeding It Your Wiki
+
+Drop `.md` (or `.txt`) files into `docs/` — that folder is indexed by default. Add
+more folders in the applet's settings (gear icon). The index rebuilds automatically
+when files change (checked when the popup opens), or manually via **Settings →
+Rebuild**.
+
+!!!info
+    The index is stored at `~/.local/share/ncos-assistant/index.json`.
+
+---
+
+## Configuration
+
+Settings live in the popup (gear icon) and persist via cosmic-config under
+`~/.config/cosmic/io.github.exothermic88.ncos-assistant/v1/`:
+
+- **Ollama server** — local by default (`localhost:11434`); toggle **"Use remote
+  server"** to point at another machine on your network.
+- **Models** — chat model (default `llama3.2:1b`) and embedding model (default
+  `embeddinggemma:300m`). Changing the embedding model invalidates the index and
+  triggers a rebuild.
+- **Context chunks** — how many document chunks are retrieved per question.
 
 ---
 

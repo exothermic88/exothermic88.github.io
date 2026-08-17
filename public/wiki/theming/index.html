@@ -904,7 +904,7 @@ kitty terminal, and VS Code together</strong>, and swaps the wallpaper to match 
 single keystroke.</p>
 <hr />
 <h2 id="switching-themes">Switching Themes</h2>
-<p>Three complete themes are included: <strong>Nord</strong> (default), <strong>Red</strong>, and <strong>Purple</strong>.</p>
+<p>Four complete themes are included: <strong>Nord</strong> (default), <strong>Red</strong>, <strong>Purple</strong>, and <strong>Green</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -929,8 +929,16 @@ single keystroke.</p>
 <td><code>Super+Ctrl+]</code></td>
 <td><code>toggle_light_dark</code></td>
 </tr>
+<tr>
+<td><strong>Pick a wallpaper</strong></td>
+<td><code>Super+Shift+W</code></td>
+<td>wallpaper picker</td>
+</tr>
 </tbody>
 </table>
+<p><strong>Picking a wallpaper also switches themes</strong>: each wallpaper belongs to a theme, and
+selecting one from the picker switches your system to that wallpaper's theme — choose
+a wallpaper from the green folder and the Green theme is applied along with it.</p>
 <p>When you cycle themes, your current COSMIC, kitty, and VS Code settings are saved back
 into the active theme before the next one is applied — so any tweaks you make to a
 theme stick with it.</p>
@@ -942,8 +950,10 @@ theme stick with it.</p>
 <h2 id="picking-a-wallpaper">Picking a Wallpaper</h2>
 <p>Press <code>Super+Shift+W</code> to open the <strong>wallpaper picker</strong> — a visual grid of all your
 wallpapers with thumbnails. Select one and it's applied instantly.</p>
-<p>Wallpapers are organized per theme under <code>~/.config/wallpapers/</code> — drop your own
-images into those folders and they'll show up in the picker.</p>
+<p>Wallpapers are organized per theme under <code>~/.config/wallpapers/</code>, with one folder per
+theme: <code>nord</code>, <code>red</code>, <code>purple</code>, and <code>green</code>. Put your own images into the folder of
+the theme they belong to and they'll show up in the picker — the folder determines
+which theme a wallpaper is tied to, and picking it switches the system to that theme.</p>
 <hr />
 <h2 id="multi-monitor-panorama-wallpapers">Multi-Monitor Panorama Wallpapers</h2>
 <p>NCOS 2.0 uses the <code>awww</code> wallpaper daemon, which supports <strong>panorama splitting</strong>:

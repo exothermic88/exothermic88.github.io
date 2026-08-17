@@ -927,20 +927,14 @@ The setup steps further down are for older installs or other Arch-based systems.
 <td><code>ncos-weather-applet</code></td>
 <td>Panel weather applet</td>
 </tr>
-<tr>
-<td><code>ncos-calamares</code></td>
-<td>The NCOS system installer (used by the live ISO)</td>
-</tr>
-<tr>
-<td><code>ncos-hotfix</code></td>
-<td>Legacy 1.x hotfix package</td>
-</tr>
 </tbody>
 </table>
 <h2 id="steps-to-add-the-ncos-repository">Steps to Add the NCOS Repository</h2>
-<p>1.<strong>Open pacman.conf file:</strong></p>
+<ol>
+<li><strong>Open pacman.conf file:</strong></li>
+</ol>
 <p>Use the following command to open the <code>pacman.conf</code> file in any text editor:</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/pacman.conf
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>txt<span class="w"> </span>/etc/pacman.conf
 </span></code></pre></div>
 2. <strong>Add NCOS repository configuration:</strong></p>
 <p>Append the following text to the end of the file:</p>
@@ -965,26 +959,14 @@ The setup steps further down are for older installs or other Arch-based systems.
 </span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><code>sudo pacman -S ncos-hotfix</code></p>
-</div>
-<ol>
-<li><strong>Apply the update:</strong></li>
-</ol>
-<p>Run this command to apply the update:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ncos-package_name
-</span></code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>ncos-hotfix</code></p>
+<p><code>sudo pacman -S ncos-assistant</code></p>
 </div>
 <hr />
 <h2 id="future-updates">Future Updates</h2>
-<p>When future updates are released for ncos packages that you have already installed, they will be automatically downloaded when you update your system packages using <code>sudo pacman -Syu</code>.</p>
-<ul>
-<li>To apply the updates, simply run the following command:</li>
-</ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ncos-package_name
+<p>When future updates are released for ncos packages that you have already installed, they are installed along with your regular system update — just run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu
 </span></code></pre></div>
+<p>No other command is needed.</p>
 
 
 
