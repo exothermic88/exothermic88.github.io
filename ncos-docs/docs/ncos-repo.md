@@ -2,8 +2,8 @@
 
 Follow these steps to add the NCOS repository to your system and access NCOS-specific packages.
 
-!!!info "Preconfigured on NCOS 2.0"
-    Systems installed from the NCOS 2.0 ISO already have the `[ncos]` repository
+!!!info "Preconfigured on NCOS 2.0 and later"
+    Systems installed from an NCOS 2.0 or later ISO already have the `[ncos]` repository
     enabled — you can install any package below directly with `sudo pacman -S`.
     The setup steps further down are for older installs or other Arch-based systems.
 
@@ -14,6 +14,8 @@ Follow these steps to add the NCOS repository to your system and access NCOS-spe
 | `ncos-assistant` | The [NCOS Assistant](assistant.md) — offline local-AI panel applet |
 | `ncos-package-update-applet` | Panel applet showing pending package updates |
 | `ncos-weather-applet` | Panel weather applet |
+| `ncos-now-playing-applet` | Panel applet showing the currently playing track, with album art (any MPRIS player) |
+| `ncos-tiling-assistant` | Tiling Assistant — GUI for choosing which apps open floating instead of auto-tiled |
 
 ## Steps to Add the NCOS Repository
 

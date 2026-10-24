@@ -27,15 +27,20 @@ To preview the wiki alone while writing: `cd ncos-docs && ../.venv/bin/zensical 
 
 ## Releases
 
-- **ISO** is hosted on SourceForge. The Download button points at
-  `sourceforge.net/projects/<project>/files/latest/download`, which always serves the
-  newest uploaded file — just upload the new ISO, no site change needed.
-  The project name is set in `src/lib/release.ts` (`SF_PROJECT`).
-- **Version / changelog** shown on the site come from the latest GitHub Release on
-  [`exothermic88/NCOS`](https://github.com/exothermic88/NCOS/releases). Create a
-  release per version (tag like `v1.0.0`, changelog in the body). The site fetches it
-  client-side and falls back to `FALLBACK_VERSION` in `src/lib/release.ts` — bump that
-  constant when releasing.
+There are no GitHub releases — **SourceForge is the source of truth.**
+
+- Upload the new ISO to the SourceForge project (set in `src/lib/release.ts`,
+  `SF_PROJECT`), named `ncos-vX.Y.Z-x86_64.iso`. The Download button points at
+  `/files/latest/download`, which always serves the newest file.
+- At build time the site reads `best_release.json` from SourceForge and takes the
+  version from the filename, plus the release date and SHA-256 shown in the download
+  section. SourceForge doesn't allow browser (CORS) requests, so this can't be live.
+- The deploy workflow rebuilds daily, so a new upload appears within a day. Run the
+  workflow manually (Actions → Deploy → Run workflow) to update immediately.
+- `FALLBACK_VERSION` in `src/lib/release.ts` is only used if SourceForge is
+  unreachable during a build — bump it occasionally.
+- Write a news post (`tag: release`) and update `ncos-docs/docs/release-notes.md` for
+  the changelog; the download section links to the newest release post.
 
 ## News posts
 

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Daily rebuild so a new ISO uploaded to SourceForge shows up on the site
+  schedule:
+    - cron: '0 6 * * *'
 
 permissions:
   contents: read

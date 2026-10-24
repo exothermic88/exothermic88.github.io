@@ -1,5 +1,35 @@
 # Release Notes 
 
+## NCOS 2.1.3
+
+New first-party apps for the panel and window tiling, the Assistant working out of the
+box, and a tuned snapshot setup.
+
+### New Features
+
+- **Now Playing applet** — new `ncos-now-playing-applet` shows the current track in
+  the panel with album art and *Artist – Title*, for any MPRIS media player. Added to
+  the panel by default.
+- **Tiling Assistant** — new `ncos-tiling-assistant` GUI for managing auto-tiling
+  exceptions (apps that open floating). COSMIC Settings, Discord and Spotify float
+  by default.
+- **Ollama included** — `ollama` now ships on the ISO, so the
+  [NCOS Assistant](assistant.md) works out of the box.
+- **grub-btrfs config** — snapshot boot entries are titled by date and description,
+  and Docker/container subvolumes are ignored. See [Backups & Snapshots](backups.md).
+- **Accessibility zoom** — preconfigured with mouse zoom shortcuts and 50% steps.
+- **Refreshed installer slideshow** — new artwork, updated text, and shortcut cards
+  matching the current defaults (`Super+B` browser, `Super+;` settings).
+
+### Changes & Removals
+
+- **Borderless panel** by default.
+- **`broadcom-wl` removed** from the ISO.
+- **`ncos-theming` no longer installed** — theming files ship directly in `/usr`.
+- **Config cleanup** — removed leftover settings for applets NCOS doesn't ship.
+
+---
+
 ## NCOS 2.0
 
 The biggest NCOS release yet — a built-in local AI assistant, btrfs installs with

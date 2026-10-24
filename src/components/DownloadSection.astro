@@ -1,6 +1,8 @@
 ---
 import ReleaseInfo from './ReleaseInfo.astro';
-import { SF_DOWNLOAD_URL, GITHUB_RELEASES_URL } from '../lib/release';
+import { SF_DOWNLOAD_URL, SF_FILES_URL, getLatestRelease } from '../lib/release';
+
+const { sha256 } = await getLatestRelease();
 ---
 
 <section class="section" id="download">
@@ -19,11 +21,19 @@ import { SF_DOWNLOAD_URL, GITHUB_RELEASES_URL } from '../lib/release';
           Download ISO
         </a>
         <p class="fineprint mono">
-          direct download · no account needed · <a href={GITHUB_RELEASES_URL} target="_blank" rel="noopener">all releases →</a>
+          direct download · no account needed · <a href={SF_FILES_URL} target="_blank" rel="noopener">all releases →</a>
         </p>
         <div class="verify">
           <p class="verify-label mono">verify your download</p>
           <pre class="mono">sha256sum ncos-*.iso</pre>
+          {
+            sha256 && (
+              <>
+                <p class="verify-label mono expected">expected sha256</p>
+                <pre class="mono hash">{sha256}</pre>
+              </>
+            )
+          }
         </div>
       </div>
       <div class="right">
@@ -79,6 +89,17 @@ import { SF_DOWNLOAD_URL, GITHUB_RELEASES_URL } from '../lib/release';
     font-size: 0.85rem;
     color: var(--teal);
     overflow-x: auto;
+  }
+
+  .expected {
+    margin-top: 0.9rem;
+  }
+
+  .hash {
+    color: var(--text);
+    font-size: 0.75rem;
+    word-break: break-all;
+    white-space: pre-wrap;
   }
 
   .right {

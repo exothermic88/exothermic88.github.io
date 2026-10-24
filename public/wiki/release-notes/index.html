@@ -760,6 +760,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ncos-213" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NCOS 2.1.3
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NCOS 2.1.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        New Features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-removals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Changes &amp; Removals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ncos-20" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -772,7 +811,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
+  <a href="#new-features_1" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         New Features
@@ -794,7 +833,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#changes-removals" class="md-nav__link">
+  <a href="#changes-removals_1" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Changes &amp; Removals
@@ -899,6 +938,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ncos-213" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NCOS 2.1.3
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NCOS 2.1.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        New Features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-removals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Changes &amp; Removals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ncos-20" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -911,7 +989,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#new-features" class="md-nav__link">
+  <a href="#new-features_1" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         New Features
@@ -933,7 +1011,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#changes-removals" class="md-nav__link">
+  <a href="#changes-removals_1" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
         Changes &amp; Removals
@@ -997,10 +1075,37 @@
                   
 
 <h1 id="release-notes">Release Notes</h1>
+<h2 id="ncos-213">NCOS 2.1.3</h2>
+<p>New first-party apps for the panel and window tiling, the Assistant working out of the
+box, and a tuned snapshot setup.</p>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li><strong>Now Playing applet</strong> — new <code>ncos-now-playing-applet</code> shows the current track in
+  the panel with album art and <em>Artist – Title</em>, for any MPRIS media player. Added to
+  the panel by default.</li>
+<li><strong>Tiling Assistant</strong> — new <code>ncos-tiling-assistant</code> GUI for managing auto-tiling
+  exceptions (apps that open floating). COSMIC Settings, Discord and Spotify float
+  by default.</li>
+<li><strong>Ollama included</strong> — <code>ollama</code> now ships on the ISO, so the
+  <a href="../assistant/">NCOS Assistant</a> works out of the box.</li>
+<li><strong>grub-btrfs config</strong> — snapshot boot entries are titled by date and description,
+  and Docker/container subvolumes are ignored. See <a href="../backups/">Backups &amp; Snapshots</a>.</li>
+<li><strong>Accessibility zoom</strong> — preconfigured with mouse zoom shortcuts and 50% steps.</li>
+<li><strong>Refreshed installer slideshow</strong> — new artwork, updated text, and shortcut cards
+  matching the current defaults (<code>Super+B</code> browser, <code>Super+;</code> settings).</li>
+</ul>
+<h3 id="changes-removals">Changes &amp; Removals</h3>
+<ul>
+<li><strong>Borderless panel</strong> by default.</li>
+<li><strong><code>broadcom-wl</code> removed</strong> from the ISO.</li>
+<li><strong><code>ncos-theming</code> no longer installed</strong> — theming files ship directly in <code>/usr</code>.</li>
+<li><strong>Config cleanup</strong> — removed leftover settings for applets NCOS doesn't ship.</li>
+</ul>
+<hr />
 <h2 id="ncos-20">NCOS 2.0</h2>
 <p>The biggest NCOS release yet — a built-in local AI assistant, btrfs installs with
 bootable snapshots, a full theme system, and a slimmer, faster ISO.</p>
-<h3 id="new-features">New Features</h3>
+<h3 id="new-features_1">New Features</h3>
 <ul>
 <li><strong>NCOS Assistant</strong> — a first-party COSMIC applet that puts a local AI assistant in
   your panel and dock. Runs fully offline via Ollama and can answer questions about
@@ -1033,7 +1138,7 @@ bootable snapshots, a full theme system, and a slimmer, faster ISO.</p>
 <li><strong>Android Messages</strong> — text from your desktop.</li>
 <li><strong>rofi</strong> — powers the new wallpaper picker.</li>
 </ul>
-<h3 id="changes-removals">Changes &amp; Removals</h3>
+<h3 id="changes-removals_1">Changes &amp; Removals</h3>
 <ul>
 <li><strong>Pamac removed</strong> — use <code>pacman</code>, <code>yay</code>, or COSMIC Store instead.</li>
 <li><strong>KDE Connect no longer preinstalled</strong> — install <code>kdeconnect</code> manually if you use it.</li>
