@@ -39,10 +39,10 @@ NCOS provides a variety of keyboard shortcuts to enhance your productivity. Here
 | **Move Window to Workspace 9**        | `Super+Shift+9` |
 | **Move Window to Previous Display** | `Super+Shift+Comma`             |
 | **Move Window to Next Display**     | `Super+Shift+Period`            |
-| **Move Window One Monitor Down**    |`Super+Ctrl+Shift+Down` or `Super+Ctrl+Shift+K`|
+| **Move Window One Monitor Down**    |`Super+Ctrl+Shift+Down` or `Super+Ctrl+Shift+J`|
 | **Move Window One Monitor Left**    |`Super+Ctrl+Shift+Left` or `Super+Ctrl+Shift+H`|
 | **Move Window One Monitor Right**   |`Super+Ctrl+Shift+Right` or `Super+Ctrl+Shift+L`|
-| **Move Window One Monitor Up**      |`Super+Ctrl+Shift+Up` or `Super+Ctrl+Shift+J`|
+| **Move Window One Monitor Up**      |`Super+Ctrl+Shift+Up` or `Super+Ctrl+Shift+K`|
 
 ---
 
@@ -50,8 +50,8 @@ NCOS provides a variety of keyboard shortcuts to enhance your productivity. Here
 
 | Action                   | Shortcut                          |
 |--------------------------|-----------------------------------|
-| **Focus Window Left**    | `Super+Right`                    |
-| **Focus Window Right**   | `Super+Left`                     |
+| **Focus Window Left**    | `Super+Left`                     |
+| **Focus Window Right**   | `Super+Right`                    |
 | **Focus Window Up**      | `Super+Up`                       |
 | **Focus Window Down**    | `Super+Down`                     |
 | **Focus Window In**      | `Super+I`                        |
